@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html lang="ru-RU" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="ru-RU" class="no-js ie9"><![endif]-->
+<html lang="ru-RU" class="no-js">
+  <head>
+    <title>База недвижимости</title>
+    <!--#include virtual="/views/layouts/_head.html" -->
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script src="/js/map.js"></script>
+  </head>
+  <body>
+
+    <!--#include virtual="/views/layouts/_alerts.html" -->
+    <!--#include virtual="/views/layouts/_header.html" -->
+
+    <section id="section" class="section" role="main">
+      <div class="ctn">
+
+        <nav class="bread-crumbs">
+          <a href="/" class="bread-crumbs_a">Вся база</a>
+          <span class="bread-crumbs_devider">></span>
+          <a href="/" class="bread-crumbs_a">Результаты поиска</a>
+        </nav>
+
+        <div class="cols show">
+          <div class="cols-6 mod">
+            <header class="show-header">
+              <div class="show-header_region">Ленинский район</div>
+              <div class="show-header_address">2-я линия Красноармейской Слободы ул, 7</div>
+              <div class="show-header_price"><span class="js-price-format">3700000</span> <sup>руб.</sup></div>
+            </header>
+            <section class="show-data">
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Город:</b></dt>
+                <dd class="show-data_dd">Смоленск</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Район:</b></dt>
+                <dd class="show-data_dd">Ленинский</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Улица:</b></dt>
+                <dd class="show-data_dd">2-я линия Красноармейской Слободы ул, 7</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Комнат:</b></dt>
+                <dd class="show-data_dd">3</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Тип объекта:</b></dt>
+                <dd class="show-data_dd">Квартира</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__small"><b>Тип дома:</b></dt>
+                <dd class="show-data_dd">Панельный</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__large"><b>Этаж / Этажность / Материал:</b></dt>
+                <dd class="show-data_dd">1/5 кирпич</dd>
+              </dl>
+              <dl class="show-data_dl clearfix">
+                <dt class="show-data_dt show-data_dt__large"><b>Площадь</b>, об. / жил. / кух.:</dt>
+                <dd class="show-data_dd">65/48/8,5</dd>
+              </dl>
+            </section>
+            <footer class="show-data_footer cnt tx__muted">
+              <p>Хорошая квартира в тихом зеленом месте, исторический центр. Между церквями Георгия Победоносца и Спасо-Преображенской церковью, есть горячая вода, установлена душевая кабина, пластиковые стеклопакеты, ламинат в коридоре и в большой комнате, угловая, комнаты смежные, в шаговой доступности школа и вся инфраструктура.</p>
+            </footer>
+          </div><div class="cols-5 offset-1 mod">
+            <div id="map" class="show-map"></div>
+            
+            <div class="show-sidebar m-b_4">
+              <h6 class="show-sidebar_t">Фотографии</h6>
+              <div class="show-photos cols">
+                <div class="cols-1 mod">
+                  <a href="/img/fake/image-01.jpg" class="show-photos_a" rel="photos"><img src="/img/fake/thumb-01.jpg" alt="" width="60" height="60" class="show-photos_img placeholder"></a>
+                </div><div class="cols-1 mod">
+                  <a href="/img/fake/image-02.jpg" class="show-photos_a" rel="photos"><img src="/img/fake/thumb-02.jpg" alt="" width="60" height="60" class="show-photos_img placeholder"></a>
+                </div><div class="cols-1 mod">
+                  <a href="/img/fake/image-03.jpg" class="show-photos_a" rel="photos"><img src="/img/fake/thumb-03.jpg" alt="" width="60" height="60" class="show-photos_img placeholder"></a>
+                </div><div class="cols-1 mod">
+                  <a href="/img/fake/image-04.jpg" class="show-photos_a" rel="photos"><img src="/img/fake/thumb-04.jpg" alt="" width="60" height="60" class="show-photos_img placeholder"></a>
+                </div><div class="cols-1 mod">
+                  <a href="/img/fake/image-05.jpg" class="show-photos_a" rel="photos"><img src="/img/fake/thumb-05.jpg" alt="" width="60" height="60" class="show-photos_img placeholder"></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="show-sidebar">
+              <h6 class="show-sidebar_t">Риелтор</h6>
+              <div class="show-contacts"><b>Иван</b> / 63-03-25 / +7-903-649-0325</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!--#include virtual="/views/layouts/_footer.html" -->
+
+  </body>
+</html>

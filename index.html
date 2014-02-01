@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html lang="ru-RU" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="ru-RU" class="no-js ie9"><![endif]-->
+<html lang="ru-RU" class="no-js">
+  <head>
+    <title>База недвижимости</title>
+    <!--#include virtual="/views/layouts/_head.html" -->
+  </head>
+  <body>
+
+    <!--#include virtual="/views/layouts/_alerts.html" -->
+    <!--#include virtual="/views/layouts/_header.html" -->
+
+    <section id="section" class="section" role="main">
+      <div class="ctn">
+
+        <!--#include virtual="/views/layouts/_navigation.html" -->
+
+        <div class="filter">
+          <form class="form">
+
+            <header class="filter-header">
+              <div class="cols">
+                <div class="cols-6 mod">
+                  <label class="form_label filter-header_filter-type"><span class="form_radio__fake form_el__fake"><input type="radio" class="form_radio__real form_el__real" name="filter-type" checked></span> Продажа</label>
+                  <label class="form_label filter-header_filter-type"><span class="form_radio__fake form_el__fake"><input type="radio" class="form_radio__real form_el__real" name="filter-type"></span> Аренда</label>
+                </div><div class="cols-6 mod ta-r tx__normal tx__muted">Для выбора нескольких пунктов нажмите и удерживайте "Ctrl"</div>
+              </div>
+            </header>
+
+            <section class="filter-section">
+              <div class="cols">
+
+                <div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Город:</h6>
+                  <ul class="form_select-multiple" data-name="city">
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="city" data-value="1">Смоленск<input type="hidden" name="city[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="city" data-value="2">Область<input type="hidden" name="city[]" value=""></a></li>
+                  </ul>
+                </div><div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Район:</h6>
+                  <ul class="form_select-multiple" data-name="region">
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="region" data-value="1">Смоленский<input type="hidden" name="region[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="region" data-value="2">Промышленный<input type="hidden" name="region[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="region" data-value="3">Заднепровский<input type="hidden" name="region[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="region" data-value="4">Ленинский<input type="hidden" name="region[]" value=""></a></li>
+                  </ul>
+                </div><div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Тип объекта:</h6>
+                  <ul class="form_select-multiple" data-name="object-type">
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="1">Дача<input type="hidden" name="object-type[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="2">Дом<input type="hidden" name="object-type[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="3">Квартира<input type="hidden" name="object-type[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="4">Комната<input type="hidden" name="object-type[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="4">Гараж<input type="hidden" name="object-type[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="object-type" data-value="4">Койко место<input type="hidden" name="object-type[]" value=""></a></li>
+                  </ul>
+                </div><div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Материал стен:</h6>
+                  <ul class="form_select-multiple" data-name="material">
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="material" data-value="1">Блочный<input type="hidden" name="material[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="material" data-value="2">Дерево<input type="hidden" name="material[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="material" data-value="3">Комбинированный<input type="hidden" name="material[]" value=""></a></li>
+                    <li class="form_select-multiple_i"><a href="#" class="form_select-multiple_a" data-group="material" data-value="4">Монолит<input type="hidden" name="material[]" value=""></a></li>
+                  </ul>
+                </div><div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Общая площадь:</h6>
+                  <div class="form_row">
+                    <label class="form_label tx__muted">от</label>
+                    <input type="text" class="form_text">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label tx__muted">до</label>
+                    <input type="text" class="form_text">
+                  </div>
+                </div><div class="cols-2 mod filter-section_block">
+                  <h6 class="m-b_2">Цена:</h6>
+                  <div class="form_row">
+                    <label class="form_label tx__muted">от</label>
+                    <input type="text" class="form_text">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label tx__muted">до</label>
+                    <input type="text" class="form_text">
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <footer class="filter-footer">
+              <div class="cols">
+                <div class="cols-6 mod tx__normal">
+                  <b>Количество комнат:</b>
+                  <label class="form_label filter-footer_rooms-count"><span class="form_checkbox__fake form_el__fake"><input type="checkbox" class="form_checkbox__real form_el__real" checked></span> 1</label>
+                  <label class="form_label filter-footer_rooms-count"><span class="form_checkbox__fake form_el__fake"><input type="checkbox" class="form_checkbox__real form_el__real"></span> 2</label>
+                  <label class="form_label filter-footer_rooms-count"><span class="form_checkbox__fake form_el__fake"><input type="checkbox" class="form_checkbox__real form_el__real"></span> 3</label>
+                  <label class="form_label filter-footer_rooms-count"><span class="form_checkbox__fake form_el__fake"><input type="checkbox" class="form_checkbox__real form_el__real"></span> 4+</label>
+                </div><div class="cols-6 mod ta-r">
+                  <div class="cols"><div class="cols-2 mod"><input type="reset" class="form_button form_el__block" value="Сбросить"></div><div class="cols-2 mod"><input type="submit" class="form_button form_button__success form_el__block" value="Найти"></div></div>
+                </div>
+              </div>
+            </footer>
+
+          </form>
+        </div>
+
+      </div>
+
+      <table class="result">
+        <thead class="result_head">
+          <tr>
+            <th>&nbsp;</th>
+            <th class="result_th">№</th>
+            <th class="result_th">&nbsp;</th>
+            <th class="result_th">Район</th>
+            <th class="result_th">Улица</th>
+            <th class="result_th">Тип</th>
+            <th class="result_th">Площадь</th>
+            <th class="result_th">Примечание</th>
+            <th class="result_th" width="110">Цена</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody class="result_body">
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">1</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Промышленный</td>
+            <td class="result_td result_td__address"><b>2-я линия Красноармейской Слободы</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>118</b></td>
+            <td class="result_td result_td__note">Не угловая, гор. вода, санузел сов. комнаты</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">23400000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">2</td>
+            <td class="result_td result_td__ico">&nbsp;</td>
+            <td class="result_td result_td__region">Ленинский</td>
+            <td class="result_td result_td__address"><b>Большая Советская 28</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>98</b></td>
+            <td class="result_td result_td__note">&nbsp;</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">2500000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">3</td>
+            <td class="result_td result_td__ico">&nbsp;</td>
+            <td class="result_td result_td__region">Заднепровский</td>
+            <td class="result_td result_td__address"><b>Королева</b></td>
+            <td class="result_td result_td__type">Дом</td>
+            <td class="result_td result_td__area"><b>200</b></td>
+            <td class="result_td result_td__note">Хорошая, не угловая, гор. вода, санузел</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">15400000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">4</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Заднепровский</td>
+            <td class="result_td result_td__address"><b>Маршала Жукова</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>74</b></td>
+            <td class="result_td result_td__note">Светлая, просторная, дорогая, но очень красивая.</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">4250000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">5</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Смоленский</td>
+            <td class="result_td result_td__address"><b>3-я линия Красноармейской Слободы</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>92</b></td>
+            <td class="result_td result_td__note">Хорошая, не угловая, гор. вода, санузел</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">3100000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">6</td>
+            <td class="result_td result_td__ico">&nbsp;</td>
+            <td class="result_td result_td__region">Заднепровский</td>
+            <td class="result_td result_td__address"><b>Королева</b></td>
+            <td class="result_td result_td__type">Дом</td>
+            <td class="result_td result_td__area"><b>200</b></td>
+            <td class="result_td result_td__note">Хорошая, не угловая, гор. вода, санузел</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">15400000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">7</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Заднепровский</td>
+            <td class="result_td result_td__address"><b>Маршала Жукова</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>74</b></td>
+            <td class="result_td result_td__note">Светлая, просторная, дорогая, но очень красивая.</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">4250000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">8</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Смоленский</td>
+            <td class="result_td result_td__address"><b>Маршала Жукова</b></td>
+            <td class="result_td result_td__type">Квартира</td>
+            <td class="result_td result_td__area"><b>92</b></td>
+            <td class="result_td result_td__note">Хорошая, не угловая, гор. вода, санузел</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">3100000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+          <tr class="result_tr" onclick="window.location='/show.html'">
+            <td class="result_td result_td__space">&nbsp;</td>
+            <td class="result_td result_td__number">9</td>
+            <td class="result_td result_td__ico"><i class="ico-12 ico-12__camera"></i></td>
+            <td class="result_td result_td__region">Смоленский</td>
+            <td class="result_td result_td__address"><b>Октябрьской революции</b></td>
+            <td class="result_td result_td__type">Коттедж</td>
+            <td class="result_td result_td__area"><b>115</b></td>
+            <td class="result_td result_td__note">Отличная, угловая, гор. вода, санузел, стиральный порошок.</td>
+            <td class="result_td result_td__price"><b><span class="js-price-format">9400000</span> руб.</b></td>
+            <td class="result_td result_td__space">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <!--#include virtual="/views/layouts/_footer.html" -->
+
+  </body>
+</html>
